@@ -1,0 +1,639 @@
+@charset "UTF-8";
+html {
+    font-size: 62.5%;
+}
+/* 共通 */
+.common__section {
+    min-width: 1280px;
+    overflow: hidden;
+}
+.common__inner {
+    min-width: 1000px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.btn {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.7;
+}
+.br-sp {
+    display: none;
+}
+/* ここまで共通 */
+
+/* メインビジュアル */
+.mv {
+    position: relative;
+    background: url("../img/main_bg.jpg") no-repeat center top;
+    height: 760px;
+}
+.mv::after {
+    content: '';
+    position: absolute;
+    background: url("../img/punc1.png") no-repeat center top;
+    bottom: 0;
+    width: 100%;
+    height: 138px;
+    transform: scale(1.1);
+}
+.mv__inner {
+    width: 1021px;
+    margin: 0 auto;
+    position: relative;
+}
+.company-logo {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.mv__title {
+    position: absolute;
+    top: 90px;
+    left: 177px;
+    width: 647px;
+}
+.mv__pdtitle {
+    position: absolute;
+    top: 335px;
+    left: 47px;
+    width: 390px;
+}
+@media screen and (max-width:750px) {
+
+    .common__section {
+        min-width: 0;
+    }
+    .common__inner {
+        width: 100%;
+        min-width: 0;
+    }
+    .br-sp {
+        display: block;
+    }
+    .mv {
+        height: auto;
+    }
+    .mv::after {
+        background: url("../img/punc1.png") no-repeat center top / 100% auto;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        padding-top: 9.3%;
+        transform: scale(1);
+    }
+    .mv__inner {
+        background: url("../img/main_bg_sp.jpeg") no-repeat center top / 100%;
+        padding-top: 117%;
+        height: 0;
+        width: 100%;
+        min-width: 0;
+    }
+    .company-logo {
+        position: absolute;
+        width: 64px;
+        top: 11px;
+        left: auto;
+        right: 11px;
+    }
+    .mv__title {
+        width: 82%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .mv__pdtitle {
+        top: auto;
+        bottom: 0px;
+        width: 83%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* ここまでメインビジュアル */
+
+.description {
+    background: url("../img/bg.jpg");
+    position: relative;
+}
+.description::after {
+    content: '';
+    background: url("../img/punc2-bg.png") center bottom repeat-x;
+    display: block;
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    bottom: -87px;
+}
+.description__inner {
+    padding: 45px 0 60px;
+}
+.description__title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.description__title__img {
+    width: 380px;
+}
+.description__explanation {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.22;
+    margin-bottom: 10px;
+    color: #333333;
+}
+.price {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.14;
+    margin-bottom: 4.5rem;
+    color: #333333;
+}
+.description-btn__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.purchase {
+    display: inline-block;
+    width: 374px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.4rem;
+    line-height: 1.58;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-bottom: 4.5rem;
+    color: #ffffff;
+    background-color: #004b4a;
+    position: relative;
+
+}
+.purchase::after {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);  
+    transition: all 0.3s ease;
+}
+.purchase:hover::after {
+    right: 15px;
+}
+.details {
+    display: inline-block;
+    width: 374px;
+}
+.details__img {
+    width: 100%;
+}
+.product {
+    padding-top: 40px;
+    background: url("../img/border_bg1.png") center top no-repeat;
+    height: 1000px;
+    margin-top: 67px;
+}
+
+.product::after {
+    content: "";
+    background: url("../img/border_bg3.png") center bottom no-repeat;
+    display: block;
+    height: 38px;
+}
+.product__wrapper {
+    background: url("../img/border_bg2.png") center top repeat-y;
+    text-align: center;
+}
+.product__inner {
+    width: 860px;
+    margin: 0 auto;
+    padding-bottom: 27px;
+}
+.product-des__inner {
+    padding-bottom: 22px;
+}
+.product__title {
+    padding-top: 20px;
+}
+.product__img {
+    margin: 40px 0 10px;
+}
+.product__bnr {
+    width: 464px;
+}
+.product-exam__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+}
+.product-exam {
+    width: 280px;
+}
+.product-exam__img {
+    width: 100%;
+}
+.product-exam-des__inner {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.product-exam-des {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.63;
+    font-weight: 700;
+    color: #4ba200;
+}
+.product-exam__btn {
+    width: 240px;
+}
+
+.check {
+    color: #FFD800;
+    font-weight: 900;
+}
+@media screen and (max-width:750px) {
+    .description__title__img {
+        width: 63%;
+    }
+    .description__explanation {
+        font-size: 3.4375vw;
+    }
+    .price {
+        font-size: 2vw;
+    }
+    .description-btn__inner {
+        justify-content: center;
+        font-size: 20px;
+    }
+    .purchase {
+        width: 75%;
+        font-size: max(calc(100% - 1vw),1.4rem);
+        margin-bottom: 1.5em;
+    }
+    .details {
+        width: 75%;
+    }
+    .product {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 15px;
+        height: auto;
+    }
+    .product::after {
+        height: 12px;
+    }
+    .product , .product::after{
+        background-size: 100%;
+    }
+    .product__wrapper {
+        background-size: 100%;
+        padding-bottom: 13px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .product__inner {
+        width: 100%;
+    }
+    .product__title {
+        width: 77%;
+    }
+    .product__img , .product__bnr {
+        width: 100%;
+    }
+    .product-exam {
+        display: flex;
+        width: 100%;
+    }
+    .product-exam__img {
+        width: 50%;
+    }
+    .product-exam__inner {
+        flex-direction: column;
+        padding: 0;
+    }
+    .product-exam-des__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        padding: 0 10px;
+    }
+    .product-exam-des__inner {
+        margin-bottom: 5px;
+    }
+    .product-exam-des {
+        font-size: 3.4375vw;
+    }
+    .product-exam__btn  {
+        width: 100%;
+    }
+    
+/* ストア */
+}
+.store {
+    position: relative;
+    background-color: #fbf3cd;
+}
+.store::after {
+    content: '';
+    background: url("../img/punc2-bg.png") center bottom repeat-x;
+    display: block;
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    bottom: -87px;
+}
+.store__inner {
+    padding: 25px 0 60px;
+    text-align: center;
+}
+.store-content__inner {
+    background-color: #FBEDB7;
+    min-width: 930px;
+    width: 930px;
+    margin: 0 auto;
+    padding: 30px 0 27px;
+    border: 5px dotted orange;
+}
+.store-content__title {
+    display: inline-block;
+    width: 713px;
+    margin-bottom: 35px;
+}
+.store-des__inner {
+    margin-bottom: 40px;
+}
+.store-content__subTitle {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #545454;
+}
+.store-list {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    line-height: 1.57;
+    color: #333333;
+}
+.caution {
+    font-size: 1.2rem;
+    line-height: 1.58;
+    color: #333333;
+}
+.store-content__title-img {
+    width: 100%;
+}
+.contact__btn {
+    width: 373px;
+}
+@media screen and (max-width:750px) {
+    .store__inner {
+        box-sizing: border-box;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+    .store-content__inner {
+        min-width: 0;
+        width: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .store-content__title {
+        width: 63.96vw;
+    }
+    .store-content__subTitle {
+        font-size: 3.4375vw;
+    }
+    .store-list {
+        font-size: 2.8125vw;
+    }
+    .store-list br {
+        display: none;
+    }
+    .caution {
+        font-size: 2.5vw;
+    }
+    .contact__btn {
+        width: 70vw;
+    }
+}
+/* おすすめ */
+.recommend {
+    padding-top: 130px;
+    background-color: #FFD800; 
+    position: relative;  
+}
+.recommend::before {
+    content: '';
+    background: url("../img/punc3_bg1.png") center bottom repeat-x;
+    display: block;
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+}
+.recommend::after {
+    content: '';
+    background: url("../img/punc3_bg.png") center bottom repeat-x;
+    display: block;
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    bottom: 0;
+}
+.recommend__inner {
+    text-align: center;
+    height: 1232px;
+    min-width: 1000px;
+    width: 1000px;
+    background: url("../img/c03_bg.png") no-repeat center top;
+    margin: 0 auto;
+}
+.recommend__title {
+    display: inline-block;
+    width: 392px;
+    margin-bottom: 52px;
+}
+.recommend__title-img {
+    width: 100%;
+}
+.recommend-content__inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+.recommend-content__txt {
+    width: 218px;
+}
+.recommend-content-d__inner {
+    position: relative;
+    height: 500px;
+}
+.recommend-content-d__txt {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 632px;
+}
+.recommend-content-d__img {
+    position: absolute;
+    top: 150px;
+    left: 570px;
+    width: 330px;
+}
+.product-page__img {
+    width: 374px;
+}
+@media screen and (max-width:750px) {
+    .recommend__inner {
+        padding-bottom: 100px;
+        height: auto;
+        min-width: 0;
+        width: auto;
+        background: url("../img/c03_bg_sp.png") no-repeat center top / 100%;
+    }
+    .recommend__title {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .recommend__title-img {
+        width: 68vw;
+    }
+    .recommend-content__inner {
+        display: block;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .recommend-content__txt {
+        position: static;
+        width: 33%;
+    }
+    .recommend-content__img {
+        position: absolute;
+        width: 66%;
+        right: 0;
+        bottom: -45px;
+    }
+    .recommend-content-d__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        height: auto;
+    }
+    .recommend-content-d__txt {
+        position: static;
+        width: 88vw;
+    }
+    .recommend-content-d__img {
+        position: static;
+        width: 56%;
+        order: -1;
+        padding-left: 10vw;
+    }
+    .product-page__img {
+        width: 75%;
+    }
+}
+/* フッター */
+footer {
+    background-color: #FFD800;
+    position: relative;
+}
+footer::after {
+    content: '';
+    background: url("../img/punc2-bg.png") center bottom repeat-x;
+    display: block;
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    top: 0;
+}
+.footer__inner {
+    text-align: center;
+    padding: 100px 0 40px;
+}
+.footer-bnr__inner {
+    margin-bottom: 31px;
+}
+.bnr-link{
+    display: inline-block;
+    width: 227px;
+    border: 1px solid silver;
+    margin-right: 19px;
+}
+.bnr-link:last-of-type {
+    margin-right: 0;
+}
+.footer-bnr {
+    width: 100%;
+}
+.privacy {
+    font-size: 1.4rem;
+    line-height: 1.57;
+    margin-bottom: 25px;
+}
+.copyright {
+    font-size: 1.4rem;
+    line-height: 1.63;
+}
+
+@media screen and (max-width:750px) {
+    .footer-bnr__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: -10px;
+    }
+    .bnr-link {
+        width: 38.666%;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+    .bnr-link:nth-of-type(even) {
+        margin-right: 0;
+    }
+    .privacy {
+        font-size: 1.2rem;
+    }
+    .copyright {
+        font-size: 1.2em;
+    }
+
+}
+
+/* インスタグラムアイコン */
+.front-ig {
+    position: fixed; /* ※1 */
+    bottom: 15px;
+    right: 15px;
+    z-index: 1;
+}
+.front-ig img {
+    width: 50px;
+    height: 50px;
+}
+
+/* フッター */
+.footer {
+    height: 400px;
+    background-image: url(../img/footer.png); /* ※2 */
+    background-size: cover;
+}
+.footer p {
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}
